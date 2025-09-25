@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alphabet Pronunciation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click a Letter to Hear Its Pronunciation</h1>
+    <div class="button-container">
+        <button onclick="playSound('A')">A</button>
+        <button onclick="playSound('B')">B</button>
+        <button onclick="playSound('C')">C</button>
+        <button onclick="playSound('D')">D</button>
+        <button onclick="playSound('E')">E</button>
+        <button onclick="playSound('F')">F</button>
+        <button onclick="playSound('G')">G</button>
+        <button onclick="playSound('H')">H</button>
+        <button onclick="playSound('I')">I</button>
+        <button onclick="playSound('J')">J</button>
+        <button onclick="playSound('K')">K</button>
+        <button onclick="playSound('L')">L</button>
+        <button onclick="playSound('M')">M</button>
+        <button onclick="playSound('N')">N</button>
+        <button onclick="playSound('O')">O</button>
+        <button onclick="playSound('P')">P</button>
+        <button onclick="playSound('Q')">Q</button>
+        <button onclick="playSound('R')">R</button>
+        <button onclick="playSound('S')">S</button>
+        <button onclick="playSound('T')">T</button>
+        <button onclick="playSound('U')">U</button>
+        <button onclick="playSound('V')">V</button>
+        <button onclick="playSound('W')">W</button>
+        <button onclick="playSound('X')">X</button>
+        <button onclick="playSound('Y')">Y</button>
+        <button onclick="playSound('Z')">Z</button>
+
+    </div>
+    <audio id="audioPlayer"></audio>
+    <script>
+        function playSound(letter) {
+            const audio = document.getElementById('audioPlayer');
+            audio.src = `audio/${letter}.mp3`;
+            audio.play();
+        }
+    </script>
+</body>
+</html>
